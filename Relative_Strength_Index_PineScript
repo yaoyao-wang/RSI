@@ -1,0 +1,32 @@
+//Step One: Initial Setting
+//@version = 4
+
+Strategy("Yaonology RSI Indicators Tutorial", overlay=false, default_qty_type = strategy.precent_of_equity, default_qty_value = 100, currency = currency.USD, initial_capital = 10000, commission_type = strategy.commission.percent, commission_value = 0)
+
+//Step Two: Parameter Setting
+r = rsi(close, 14)
+
+//Step Three: Plotting
+plot(r, color = color.blue)
+
+//Step Four: Strategy Entry And Strategy Close
+//Strategy One: RSI Overbought and Oversold
+if (r > 30 and r[1] < 30)
+    strategy.entry(id = "kd", long = true)
+    
+if (r < 70 and r[1] > 70)
+    strategy.close(id = "kd") 
+    
+//Strategy Two: RSI Bull and Bear Zone
+if (r > 60 and r[1] < 60)
+    strategy.entry(id = "kd", long = true)
+    
+if (r < 40 and r[1] > 40)
+    strategy.close(id = "kd") 
+    
+//Strategy Three: RSI Against Market
+if (r > 70 and r[1] < 70)
+    strategy.entry(id = "rsi", long = true)
+    
+if (r < 30 and r[1] > 30)
+    strategy.close(id = "rsi")
