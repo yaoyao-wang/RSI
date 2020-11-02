@@ -1,13 +1,12 @@
 //Step One: Initial Setting
 //@version = 4
-
 Strategy("Yaonology RSI Indicators Tutorial", overlay=false, default_qty_type = strategy.precent_of_equity, default_qty_value = 100, currency = currency.USD, initial_capital = 10000, commission_type = strategy.commission.percent, commission_value = 0)
 
 //Step Two: Parameter Setting
-r = rsi(close, 14)
+r = rsi(close, 14) //the closing price of the last 14 days
 
 //Step Three: Plotting
-plot(r, color = color.blue)
+plot(r, color = color.blue) //plotting RSI in blue
 
 //Step Four: Strategy Entry And Strategy Close
 //Strategy One: RSI Overbought and Oversold
