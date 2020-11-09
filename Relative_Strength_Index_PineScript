@@ -6,7 +6,9 @@ strategy("Yaonology RSI Indicators Tutorial", overlay=false, default_qty_type = 
 r = rsi(close, 14) //the closing price of the last 14 days
 
 //Step Three: Plotting
-plot(r, color = color.blue) //plotting RSI in blue
+plot(r, color = color.orange) //plotting RSI in blue
+hline(80, color = color.red, linestyle = hline.style_dashed, linewidth = 1)
+hline(20, color = color.green, linestyle = hline.style_dashed, linewidth = 1)
 
 //Step Four: Strategy Entry And Strategy Close
 //Strategy One: RSI Overbought and Oversold
