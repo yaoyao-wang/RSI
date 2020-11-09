@@ -7,8 +7,8 @@ r = rsi(close, 14) //the closing price of the last 14 days
 
 //Step Three: Plotting
 plot(r, color = color.orange) //plotting RSI in blue
-hline(80, color = color.red, linestyle = hline.style_dashed, linewidth = 1)
-hline(20, color = color.green, linestyle = hline.style_dashed, linewidth = 1)
+hline(70, color = color.red, linestyle = hline.style_dashed, linewidth = 1)
+hline(30, color = color.green, linestyle = hline.style_dashed, linewidth = 1)
 
 //Step Four: Strategy Entry And Strategy Close
 //Strategy One: RSI Overbought and Oversold
@@ -17,7 +17,10 @@ if (r > 30 and r[1] < 30)
     
 if (r < 70 and r[1] > 70)
     strategy.close(id = "rsi_1") 
-    
+
+hline(60, color = color.red, linestyle = hline.style_dashed, linewidth = 1)
+hline(40, color = color.green, linestyle = hline.style_dashed, linewidth = 1)
+
 //Strategy Two: RSI Bull and Bear Zone
 if (r > 60 and r[1] < 60)
     strategy.entry(id = "rsi_2", long = true)
