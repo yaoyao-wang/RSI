@@ -138,16 +138,16 @@ After price increases to some degree, it would begin to drop and so would RSI. H
 
     //Step Four: Strategy Entry And Strategy Close
     if (r > 30 and r[1] < 30)
-        strategy.entry(id = "kd", long = true)
+        strategy.entry(id = "rsi", long = true)
         
     if (r < 70 and r[1] > 70)
-        strategy.close(id = "kd") 
+        strategy.close(id = "rsi") 
         
  |  | **Net Profit** | **Precent Profitable** | **Profit Factor** | **Max Drawdown** | 
 | --- | --- | ---| --- | --- |
 | **RSI Overbought and Oversold** | 105.66% | 85.11% | 2.129 | 39.13% |
 
-(9) This is the historical cumulative result we get by applying KD strategy only to SPY data.
+(9) This is the historical cumulative result we get by applying RSI strategy only to SPY data.
 
 #### RSI Bull and Bear Zone
 
@@ -161,10 +161,10 @@ After price increases to some degree, it would begin to drop and so would RSI. H
 
     //Step Four: Strategy Entry And Strategy Close
     if (r > 60 and r[1] < 60)
-        strategy.entry(id = "kd", long = true)
+        strategy.entry(id = "rsi", long = true)
         
     if (r < 40 and r[1] > 40)
-        strategy.close(id = "kd") 
+        strategy.close(id = "rsi") 
         
 |  | **Net Profit** | **Precent Profitable** | **Profit Factor** | **Max Drawdown** | 
 | --- | --- | ---| --- | --- |
