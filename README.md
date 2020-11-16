@@ -1,3 +1,5 @@
+[![Relative Strength Index PineScript TradingView Code-along Tutorial | Trading Algorithm](https://res.cloudinary.com/marcomontalbano/image/upload/v1605565532/video_to_markdown/images/youtube--8P6ia8OJq-M-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=8P6ia8OJq-M&feature=youtu.be "Relative Strength Index PineScript TradingView Code-along Tutorial | Trading Algorithm")
+
 ## 1. What is the Relative Strength Index
 
 ### · Background & Formula
